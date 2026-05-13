@@ -41,7 +41,7 @@ const register = async (req, res) => {
         _id: user._id,
         name: user.name,
         email: user.email,
-        isAdmin: user.isAdmin,
+        role: user.isAdmin ? "admin" : "user",
       },
     });
   } catch (error) {
@@ -86,7 +86,7 @@ const login = async (req, res) => {
         _id: user._id,
         name: user.name,
         email: user.email,
-        isAdmin: user.isAdmin,
+        role: user.isAdmin ? "admin" : "user",
       },
     });
   } catch (error) {
